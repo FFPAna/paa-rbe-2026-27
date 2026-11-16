@@ -113,6 +113,62 @@ td.tg.cm:hover{background-image:linear-gradient(225deg,#e0341a 0,#e0341a 5px,tra
 @media (prefers-reduced-motion:no-preference){.toast{transition:opacity .2s}}
 @media print{.bar .actions,.tabs,.fbar,.toast{display:none}body{overflow:visible;display:block}.sheet{position:static;overflow:visible}td.fz,td.fzc{position:static}}
 
+/* ---------- registos de sessões */
+td.rgc{padding:0;text-align:center;vertical-align:middle}
+button.rg{font:700 12px/1 var(--ui);width:24px;height:20px;border-radius:10px;border:1px solid var(--coral);background:#fff;color:var(--coral-d);cursor:pointer;padding:0}
+button.rg:hover{background:#fff1ee}
+button.rg.has{background:var(--coral-d);border-color:var(--coral-d);color:#fff}
+button.rg:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+td.auto{cursor:pointer;background-image:linear-gradient(rgba(0,176,240,.13),rgba(0,176,240,.13))}
+td.auto:hover{box-shadow:inset 0 0 0 1px rgba(0,140,200,.6)}
+.rgd{max-width:min(96vw,1040px);width:1040px;max-height:92vh;padding:0}
+.rgd[open]{display:flex;flex-direction:column}
+.rg-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:18px 22px 10px}
+.rg-kicker{margin:0 0 2px;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.rgd h2{margin:0;font-size:18px;line-height:1.25;text-wrap:balance}
+.rgd h3{margin:0 0 10px;font-size:14px}
+.rg-tot{display:flex;flex-wrap:wrap;gap:6px 8px;padding:0 22px 12px;font-size:12.5px;color:#3a4653}
+.rg-chip{background:#eef6fb;border:1px solid #cfe6f3;border-radius:999px;padding:3px 10px}
+.rg-chip b{color:var(--ink);font-variant-numeric:tabular-nums}
+.rg-none{color:var(--muted)}
+.rg-note{margin:0 22px 12px;padding:8px 12px;background:#fff7e0;border:1px solid #ecd58a;border-radius:8px;font-size:12.5px;line-height:1.45;color:#4a3b00}
+.rg-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:0;border-top:1px solid var(--line);min-height:0;overflow:auto}
+.rg-form,.rg-list{padding:16px 22px 18px;min-width:0}
+.rg-list{border-left:1px solid var(--line);background:#fafbfc}
+.rg-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.rgd label{display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:#3a4653}
+.rgd input[type=date],.rgd input[type=number],.rgd input[type=text],.rgd input[type=search]{font:inherit;font-size:14px;padding:6px 8px;border:1px solid #c5ccd4;border-radius:6px;background:#fff;color:var(--ink);min-width:0}
+.rgd input:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+.rg-tbox{border:1px solid var(--line);border-radius:8px;margin-bottom:12px;background:#fff}
+.rg-thead{display:flex;align-items:center;gap:8px;padding:8px 10px;border-bottom:1px solid var(--line);font-size:12.5px;flex-wrap:wrap}
+.rg-thead strong{margin-right:auto}
+.rg-thead input{width:150px;padding:4px 8px !important;font-size:13px !important}
+.rg-turmas{max-height:210px;overflow:auto;padding:6px 6px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:0 8px}
+.rgd label.rg-t{flex-direction:row;align-items:center;gap:7px;padding:4px 6px;border-radius:6px;font-size:13px;color:var(--ink);cursor:pointer}
+.rgd label.rg-t:hover{background:#f1f4f7}
+.rg-t span{min-width:0;overflow-wrap:anywhere}
+.rg-t small{margin-left:auto;color:var(--muted);white-space:nowrap;font-size:11.5px}
+.rg-empty{margin:6px 6px 10px;color:var(--muted);font-size:13px;line-height:1.45;grid-column:1/-1}
+#rg-goto{margin:0 6px 8px;justify-self:start}
+.rg-extra{border:1px solid var(--line);border-radius:8px;margin:0 0 12px;padding:8px 10px 10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:10px}
+.rg-extra legend{font-size:12.5px;color:#3a4653;padding:0 4px}
+.rg-obs{margin-bottom:12px}
+.rg-err{margin:0 0 10px;color:#a3260f;font-size:13px;font-weight:600}
+.rg-actions{display:flex;gap:8px}
+.lnk{font:inherit;font-size:12.5px;color:var(--focus);background:none;border:0;padding:2px 4px;cursor:pointer;text-decoration:underline;border-radius:4px}
+.lnk.arm{color:#a3260f;font-weight:700}
+.lnk:focus-visible{outline:2px solid var(--focus)}
+.rg-table{border-collapse:collapse;width:100%;font-size:13px}
+.rg-table th{text-align:left;font-size:11.5px;color:var(--muted);font-weight:600;padding:4px 8px 6px;border-bottom:1px solid var(--line)}
+.rg-table td{padding:8px;border-bottom:1px solid #e8ecf0;vertical-align:top}
+.rg-table tr.cur td{background:#eef6fb}
+.rg-table small{display:block;color:var(--muted);margin-top:2px;line-height:1.35}
+.rg-d{white-space:nowrap;font-variant-numeric:tabular-nums}
+.rg-n{text-align:center;font-variant-numeric:tabular-nums}
+.rg-ac{white-space:nowrap;text-align:right}
+.rg-rule{margin:14px 0 0;font-size:12px;color:var(--muted);line-height:1.45}
+@media (max-width:820px){.rg-cols{grid-template-columns:1fr}.rg-list{border-left:0;border-top:1px solid var(--line)}}
+
 .x0{color:#000000;vertical-align:bottom}
 .x1{color:#000000;background-color:#FFFFFF;vertical-align:bottom}
 .x2{font-size:9pt;color:#0070C0;background-color:#FFFFFF;text-align:right;vertical-align:top}
@@ -614,6 +670,7 @@ var PAA = (function () {
         maxRow: sh.maxRow, maxCol: sh.maxCol };
       S.push(o); byName[sh.name] = o; state.push({});
     });
+    setupRegs();
     ver++;
   }
 
@@ -1188,15 +1245,26 @@ var PAA = (function () {
 
   /** Gera o ficheiro .xlsx (Uint8Array) a partir do modelo original e dos dados atuais. */
   function buildXlsx(noCache) {
-    var files = D.parts.map(function (p) {
+    var extra = hasRegs() ? regsSheetXml() : null, files = [];
+    D.parts.forEach(function (p) {
       var name = p[0], data;
       if (p[1] === 2) data = utf8(sheetXml(byName[p[2]].idx, noCache));
       else if (p[1] === 1) data = b64bytes(p[2]);
-      else data = utf8(/^xl\/charts\/chart\d+\.xml$/.test(name) ? chartXml(p[2]) : p[2]);
-      return { name: name, data: data };
+      else {
+        var t = /^xl\/charts\/chart\d+\.xml$/.test(name) ? chartXml(p[2]) : p[2];
+        if (extra) {
+          if (name === '[Content_Types].xml') t = t.replace('</Types>', '<Override PartName="/' + REG_PATH + '" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>');
+          else if (name === 'xl/_rels/workbook.xml.rels') t = t.replace('</Relationships>', '<Relationship Id="rIdPaaReg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="' + REG_PATH.slice(3) + '"/></Relationships>');
+          else if (name === 'xl/workbook.xml') t = t.replace('</sheets>', '<sheet name="' + REG_SHEET + '" sheetId="' + nextSheetId(t) + '" r:id="rIdPaaReg"/></sheets>');
+        }
+        data = utf8(t);
+      }
+      files.push({ name: name, data: data });
     });
+    if (extra) files.push({ name: REG_PATH, data: utf8(extra) });
     return zip(files);
   }
+  function nextSheetId(xml) { var m, re = /sheetId="(\d+)"/g, mx = 0; while ((m = re.exec(xml))) mx = Math.max(mx, +m[1]); return mx + 1; }
 
   /* ------------------------------------------------------------ leitura de um .xlsx já preenchido */
   function unesc(s) {
@@ -1256,6 +1324,30 @@ var PAA = (function () {
     return out || String(n);
   }
 
+  function parseCells(xml, shared, dateXf) {
+    var found = {}, re = /<c\b([^>]*?)(?:\/>|>([\s\S]*?)<\/c>)/g, m;
+    while ((m = re.exec(xml))) {
+      var ref = /\br="([A-Z]+\d+)"/.exec(m[1]); if (!ref) continue;
+      var t = /\bt="(\w+)"/.exec(m[1]), inner = m[2] || '', v = /<v>([\s\S]*?)<\/v>/.exec(inner), val = null;
+      t = t ? t[1] : 'n';
+      if (t === 'inlineStr') val = siText(inner);
+      else if (v) {
+        if (t === 's') val = shared[+v[1]];
+        else if (t === 'str') val = unesc(v[1]);
+        else if (t === 'b') val = v[1] === '1' ? 'VERDADEIRO' : 'FALSO';
+        else if (t === 'e') val = null;
+        else {
+          val = parseFloat(v[1]); if (isNaN(val)) val = null;
+          var sx = /\bs="(\d+)"/.exec(m[1]);
+          if (val !== null && sx && dateXf[sx[1]]) val = serialText(val);
+        }
+      }
+      if (val === '' || val === undefined) val = null;
+      found[ref[1]] = val;
+    }
+    return found;
+  }
+
   /** Lê um .xlsx baseado neste modelo e devolve os valores das células editáveis. */
   function readXlsx(buf) {
     var z, shared = [], paths = {}, dateXf = {};
@@ -1275,31 +1367,14 @@ var PAA = (function () {
       if (t[3]) dateXf = dateStyles(t[3]);
       var missing = S.filter(function (sh) { return sh.editable.length && !paths[sh.name]; });
       if (missing.length) throw new Error('Este Excel não segue o modelo PAA-RBE desta aplicação (falta a folha «' + missing[0].name + '»).');
-      return Promise.all(S.map(function (sh) { return paths[sh.name] ? z.text(paths[sh.name]) : null; }));
+      return Promise.all(S.map(function (sh) { return paths[sh.name] ? z.text(paths[sh.name]) : null; })
+        .concat([paths[REG_SHEET] ? z.text(paths[REG_SHEET]) : null]));
     }).then(function (xmls) {
+      var regXml = xmls[S.length];
       var out = {}, checked = 0, differ = 0, filled = 0;
       S.forEach(function (sh, si) {
         var xml = xmls[si]; if (!xml) return;
-        var found = {}, re = /<c\b([^>]*?)(?:\/>|>([\s\S]*?)<\/c>)/g, m;
-        while ((m = re.exec(xml))) {
-          var ref = /\br="([A-Z]+\d+)"/.exec(m[1]); if (!ref) continue;
-          var t = /\bt="(\w+)"/.exec(m[1]), inner = m[2] || '', v = /<v>([\s\S]*?)<\/v>/.exec(inner), val = null;
-          t = t ? t[1] : 'n';
-          if (t === 'inlineStr') val = siText(inner);
-          else if (v) {
-            if (t === 's') val = shared[+v[1]];
-            else if (t === 'str') val = unesc(v[1]);
-            else if (t === 'b') val = v[1] === '1' ? 'VERDADEIRO' : 'FALSO';
-            else if (t === 'e') val = null;
-            else {
-              val = parseFloat(v[1]); if (isNaN(val)) val = null;
-              var sx = /\bs="(\d+)"/.exec(m[1]);
-              if (val !== null && sx && dateXf[sx[1]]) val = serialText(val);
-            }
-          }
-          if (val === '' || val === undefined) val = null;
-          found[ref[1]] = val;
-        }
+        var found = parseCells(xml, shared, dateXf);
         // confirmar que é o mesmo modelo: os rótulos fixos têm de coincidir
         sh.def.rows.forEach(function (row) {
           var line = sh.grid[row[0]];
@@ -1317,11 +1392,181 @@ var PAA = (function () {
         out[sh.name] = o;
       });
       if (checked && differ / checked > 0.05) throw new Error('Este Excel não corresponde ao modelo PAA-RBE desta aplicação (a estrutura das folhas é diferente).');
-      return { values: out, filled: filled };
+      var rg = regXml ? readRegs(parseCells(regXml, shared, dateXf)) : {}, nrg = 0;
+      for (var rk in rg) nrg += rg[rk].length;
+      return { values: out, filled: filled, regs: rg, nregs: nrg };
     });
   }
 
+  /* ------------------------------------------------------------ registos de sessões por atividade
+     Específico do modelo PAA-RBE: cada atividade (linha da folha «2. Monitorização») pode ter vários registos
+     (data, turmas, n.º de sessões, participantes). A app soma-os e preenche a linha seguindo as regras do modelo:
+     cada turma conta uma vez e o n.º de sessões é a média por turma. */
+  var REG_SHEET = '5. Registos', REG_PATH = 'xl/worksheets/sheetPaaRegistos.xml';
+  var MON = null, INFO = null, regsOn = false, actRows = [], actDomain = {}, regs = {};
+  var T_FIRST = 52, T_LAST = 251;
+  var COL = { exec: 3, turmas: 15, sess: 16, alInd: 18, alTur: 19, docInd: 22, docTur: 23, pais: 26, outros: 27, niv: [39, 40, 41, 42, 43] };
+  var AUTO_COLS = {}; [3, 15, 16, 18, 19, 22, 23, 26, 27, 39, 40, 41, 42, 43].forEach(function (c) { AUTO_COLS[c] = true; });
+  var LEVELS = ['Pré-escolar', '1.º ano', '2.º ano', '3.º ano', '4.º ano', '1.º CEB (turma mista)', '5.º ano', '6.º ano', '2.º CEB (outro)',
+    '7.º ano', '8.º ano', '9.º ano', '3.º CEB (outro)', '10.º ano', '11.º ano', '12.º ano', 'Secundário (outro)'];
+  var CYCLES = ['Pré-escolar', '1.º CEB', '2.º CEB', '3.º CEB', 'Secundário'];
+
+  function setupRegs() {
+    MON = byName['2. Monitorização'] || null; INFO = byName['0. Informação geral'] || null;
+    regs = {}; actRows = []; actDomain = {}; regsOn = false;
+    if (!MON || !INFO) return;
+    var idc = getCell(INFO.idx, T_FIRST, 7);
+    if (!idc || constValue(idc) !== 'T001') return;
+    var r, last = -9, dom = -1;
+    for (r = 1; r <= MON.maxRow; r++) {
+      var c3 = getCell(MON.idx, r, COL.exec), c2 = getCell(MON.idx, r, 2);
+      if (c3 && c3.ed && c2 && c2.k === 3) { if (r !== last + 1) dom++; last = r; actRows.push(r); actDomain[r] = 'ABCDEFGH'.charAt(dom); }
+    }
+    if (!actRows.length) return;
+    // a secção «Turmas do agrupamento» está bloqueada e oculta no Excel; na app é preenchível
+    for (r = T_FIRST; r <= T_LAST; r++) [2, 3, 4, 5, 8].forEach(function (c) {
+      var cell = getCell(INFO.idx, r, c);
+      if (cell && cell.k < 3 && !cell.ed) { cell.ed = true; INFO.editable.push(cell); }
+    });
+    INFO.showRows = [T_FIRST - 2, T_LAST];
+    regsOn = true;
+  }
+  function cycleOf(level) {
+    var t = String(level === null || level === undefined ? '' : level).toLowerCase(), m;
+    if (/pr[ée]/.test(t)) return 0;
+    if ((m = /^\s*(\d{1,2})\s*\.?\s*[ºo°]?\s*ano/.exec(t))) { var a = +m[1]; return a <= 4 ? 1 : a <= 6 ? 2 : a <= 9 ? 3 : a <= 12 ? 4 : -1; }
+    if ((m = /([123])\s*\.?\s*[ºo°]?\s*(ceb|ciclo)/.exec(t))) return +m[1];
+    if (/sec/.test(t)) return 4;
+    return -1;
+  }
+  /** Turmas definidas na folha «0. Informação geral» (linhas com escola, nível e turma preenchidos). */
+  function turmas() {
+    var out = [];
+    if (!regsOn) return out;
+    for (var r = T_FIRST; r <= T_LAST; r++) {
+      var label = cellVal(INFO.idx, r, 6);
+      if (typeof label !== 'string' || label === '') continue;
+      var n = cellVal(INFO.idx, r, 5), lvl = cellVal(INFO.idx, r, 3);
+      out.push({ id: constValue(getCell(INFO.idx, r, 7)), row: r, label: label, alunos: typeof n === 'number' && n > 0 ? n : 0,
+        escola: display(cellVal(INFO.idx, r, 2), 0), nivel: display(lvl, 0), cyc: cycleOf(lvl) });
+    }
+    return out;
+  }
+  function cleanRec(x) {
+    function n(v) { v = typeof v === 'string' ? strToNum(v) : v; return typeof v === 'number' && isFinite(v) && v > 0 ? v : 0; }
+    var t = [], seen = {};
+    (Array.isArray(x.t) ? x.t : []).forEach(function (id) { id = String(id).trim().toUpperCase(); if (/^T\d{3}$/.test(id) && !seen[id]) { seen[id] = 1; t.push(id); } });
+    return { d: /^\d{4}-\d{2}-\d{2}$/.test(x.d || '') ? x.d : '', t: t, n: Math.max(1, Math.round(n(x.n)) || 1),
+      ai: n(x.ai), dt: n(x.dt), di: n(x.di), p: n(x.p), o: n(x.o), x: typeof x.x === 'string' ? x.x : '' };
+  }
+  /** Totais de uma atividade, pelas regras do modelo. */
+  function aggregate(row) {
+    var list = regs[row] || [], perTurma = {}, sessAll = 0, tot = { ai: 0, dt: 0, di: 0, p: 0, o: 0 }, byId = {};
+    turmas().forEach(function (t) { byId[t.id] = t; });
+    list.forEach(function (rec) {
+      sessAll += rec.n;
+      rec.t.forEach(function (id) { perTurma[id] = (perTurma[id] || 0) + rec.n; });
+      tot.ai += rec.n * rec.ai; tot.dt += rec.n * rec.dt; tot.di += rec.n * rec.di; tot.p += rec.n * rec.p; tot.o += rec.n * rec.o;
+    });
+    var ids = Object.keys(perTurma), nT = ids.length, sumTS = 0, alunos = 0, niv = [0, 0, 0, 0, 0], missing = [], semNivel = 0;
+    ids.forEach(function (id) {
+      sumTS += perTurma[id];
+      var t = byId[id];
+      if (!t) { missing.push(id); return; }
+      alunos += t.alunos;
+      if (t.cyc >= 0) niv[t.cyc] += t.alunos; else semNivel += t.alunos;
+    });
+    var sess = nT ? sumTS / nT : sessAll;
+    return { n: list.length, turmas: nT, sess: sess, sessTurma: sumTS, alTur: alunos, niv: niv,
+      alInd: sess ? tot.ai / sess : 0, docTur: sess ? tot.dt / sess : 0, docInd: sess ? tot.di / sess : 0,
+      partAlInd: tot.ai, partDocTur: tot.dt, partDocInd: tot.di, pais: tot.p, outros: tot.o, missing: missing, semNivel: semNivel };
+  }
+  function put(r, c, v) { setInput(MON.idx, r, c, v ? v : null); }
+  function applyRow(row) {
+    var list = regs[row];
+    if (!list || !list.length) return;
+    var a = aggregate(row);
+    put(row, COL.exec, '■'); put(row, COL.turmas, a.turmas); put(row, COL.sess, a.sess);
+    put(row, COL.alInd, a.alInd); put(row, COL.alTur, a.alTur); put(row, COL.docInd, a.docInd); put(row, COL.docTur, a.docTur);
+    put(row, COL.pais, a.pais); put(row, COL.outros, a.outros);
+    for (var i = 0; i < 5; i++) put(row, COL.niv[i], a.niv[i]);
+  }
+  function applyRegs() { if (regsOn) for (var k in regs) applyRow(+k); }
+  function setRowRegs(row, list) {
+    if (!regsOn || actRows.indexOf(row) < 0) return false;
+    list = (list || []).map(cleanRec);
+    list.sort(function (a, b) { return a.d < b.d ? -1 : a.d > b.d ? 1 : 0; });
+    if (!list.length) {
+      if (regs[row]) { delete regs[row]; for (var c in AUTO_COLS) setInput(MON.idx, row, +c, null); }
+    } else { regs[row] = list; applyRow(row); }
+    ver++;
+    return true;
+  }
+  function getRegs() { return JSON.parse(JSON.stringify(regs)); }
+  function setRegs(obj) {
+    regs = {};
+    if (regsOn) for (var k in obj || {}) {
+      var row = +k;
+      if (actRows.indexOf(row) >= 0 && Array.isArray(obj[k]) && obj[k].length) regs[row] = obj[k].map(cleanRec);
+    }
+    applyRegs(); ver++;
+  }
+  function hasRegs() { for (var k in regs) return true; return false; }
+  function isAuto(si, r, c) { return regsOn && si === MON.idx && AUTO_COLS[c] === true && !!regs[r]; }
+  function isoToPt(d) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d || ''); return m ? m[3] + '/' + m[2] + '/' + m[1] : ''; }
+  function ptToIso(v) {
+    var t = String(v === null || v === undefined ? '' : v).trim(), m;
+    if ((m = /^(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{4})/.exec(t))) return m[3] + '-' + (m[2].length < 2 ? '0' : '') + m[2] + '-' + (m[1].length < 2 ? '0' : '') + m[1];
+    if ((m = /^(\d{4})-(\d{2})-(\d{2})/.exec(t))) return m[0];
+    return '';
+  }
+
+  var REG_HEAD = ['Linha', 'Domínio', 'Atividade', 'Data', 'N.º de sessões', 'Turmas (código)', 'Turmas', 'Alunos sem turma (por sessão)',
+    'Docentes com turma (por sessão)', 'Docentes sem turma (por sessão)', 'Pais/EE (por sessão)', 'Outros (por sessão)', 'Observações'];
+  function regsSheetXml() {
+    var byId = {}, rows = [], widths = [7, 9, 42, 12, 12, 22, 46, 14, 14, 14, 12, 12, 40];
+    turmas().forEach(function (t) { byId[t.id] = t.label; });
+    function cellX(r, c, v) {
+      if (v === null || v === undefined || v === '') return '';
+      if (typeof v === 'number') return '<c r="' + refOf(r, c) + '"><v>' + v + '</v></c>';
+      return '<c r="' + refOf(r, c) + '" t="inlineStr"><is><t xml:space="preserve">' + escText(v) + '</t></is></c>';
+    }
+    function rowX(r, vals) { var t = '<row r="' + r + '">'; vals.forEach(function (v, i) { t += cellX(r, i + 1, v); }); return t + '</row>'; }
+    rows.push(rowX(1, REG_HEAD));
+    var n = 2;
+    actRows.forEach(function (row) {
+      (regs[row] || []).forEach(function (rec) {
+        var name = cellVal(MON.idx, row, 2);
+        rows.push(rowX(n++, [row, actDomain[row], typeof name === 'string' ? name : '', isoToPt(rec.d), rec.n, rec.t.join('; '),
+          rec.t.map(function (id) { return byId[id] || id + ' (turma removida)'; }).join('; '), rec.ai || null, rec.dt || null, rec.di || null, rec.p || null, rec.o || null, rec.x]));
+      });
+    });
+    return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">' +
+      '<sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>' +
+      '<sheetFormatPr defaultRowHeight="15.6"/><cols>' + widths.map(function (w, i) { return '<col min="' + (i + 1) + '" max="' + (i + 1) + '" width="' + w + '" customWidth="1"/>'; }).join('') +
+      '</cols><sheetData>' + rows.join('') + '</sheetData></worksheet>';
+  }
+  function readRegs(found) {
+    var out = {};
+    if (!regsOn) return out;
+    for (var r = 2; r < 5000; r++) {
+      var row = found['A' + r];
+      if (row === undefined || row === null) { if (found['D' + r] === undefined && found['F' + r] === undefined) break; continue; }
+      row = typeof row === 'number' ? row : strToNum(String(row));
+      if (actRows.indexOf(row) < 0) continue;
+      var ids = found['F' + r];
+      (out[row] = out[row] || []).push(cleanRec({ d: ptToIso(found['D' + r]), n: found['E' + r], t: typeof ids === 'string' ? ids.split(/[;,\s]+/) : [],
+        ai: found['H' + r], dt: found['I' + r], di: found['J' + r], p: found['K' + r], o: found['L' + r], x: found['M' + r] === null || found['M' + r] === undefined ? '' : String(found['M' + r]) }));
+    }
+    return out;
+  }
+
   return {
+    regs: { enabled: function () { return regsOn; }, rows: function () { return actRows; }, domain: function (r) { return actDomain[r]; },
+      get: getRegs, set: setRegs, row: function (r) { return JSON.parse(JSON.stringify(regs[r] || [])); }, setRow: setRowRegs, apply: applyRegs,
+      aggregate: aggregate, turmas: turmas, isAuto: isAuto, count: function (r) { return regs[r] ? regs[r].length : 0; }, has: hasRegs,
+      LEVELS: LEVELS, CYCLES: CYCLES, cycleOf: cycleOf, isoToPt: isoToPt, monitor: function () { return MON; }, info: function () { return INFO; },
+      T_FIRST: T_FIRST, T_LAST: T_LAST },
     init: init, sheets: function () { return S; }, data: function () { return D; }, sheet: function (n) { return byName[n]; },
     getCell: getCell, cellVal: cellVal, inputValue: inputValue, setInput: setInput, parseInput: parseInput, constValue: constValue,
     display: display, sstRuns: function (i) { return D.sst[i]; }, rangeValues: rangeValues, formulaText: formulaText,
@@ -1353,6 +1598,14 @@ if (typeof module !== 'undefined') module.exports = PAA;
   function pad(n) { return (n < 10 ? '0' : '') + n; }
   function fmtDate(ts) { var d = new Date(ts); return pad(d.getDate()) + '/' + pad(d.getMonth() + 1) + ' às ' + pad(d.getHours()) + ':' + pad(d.getMinutes()); }
   function inRange(r, c, g) { return r >= g[0] && r <= g[2] && c >= g[1] && c <= g[3]; }
+  // na grelha, os decimais mostram-se com 2 casas (o valor completo fica na barra de fórmula e no Excel)
+  function disp(v, fl) { return PAA.display(typeof v === 'number' && !(fl & 2) && v % 1 !== 0 ? Math.round(v * 100) / 100 : v, fl); }
+  var RG = PAA.regs, RGON = RG.enabled(), MON = RGON ? RG.monitor().idx : -1, INFO = RGON ? RG.info().idx : -1, regSync = false;
+  function isHiddenRow(sh, r) {
+    if (sh.showRows && r >= sh.showRows[0] && r <= sh.showRows[1]) return false;
+    return !!(sh.rowMeta[r] && sh.rowMeta[r].hidden);
+  }
+  function snapshot() { return { snap: PAA.exportState(), regs: RG.get() }; }
 
   /* ------------------------------------------------------------ memória no navegador */
   function load() {
@@ -1360,16 +1613,16 @@ if (typeof module !== 'undefined') module.exports = PAA;
       var raw = localStorage.getItem(STORE);
       if (raw) {
         var o = JSON.parse(raw);
-        PAA.importState(o.data || {});
+        PAA.importState(o.data || {}); RG.set(o.regs || {});
         meta.saved = o.saved || null; meta.exported = o.exported || null; meta.pending = !!o.pending;
-      } else { PAA.clearState(); meta = { saved: null, exported: null, pending: false }; }
+      } else { PAA.clearState(); RG.set({}); meta = { saved: null, exported: null, pending: false }; }
     } catch (e) { storageOk = false; }
   }
   var saveTimer = null;
   function saveNow() {
     clearTimeout(saveTimer); saveTimer = null;
     try {
-      localStorage.setItem(STORE, JSON.stringify({ v: 1, saved: meta.saved, exported: meta.exported, pending: meta.pending, data: PAA.exportState() }));
+      localStorage.setItem(STORE, JSON.stringify({ v: 1, saved: meta.saved, exported: meta.exported, pending: meta.pending, data: PAA.exportState(), regs: RG.get() }));
       storageOk = true;
     } catch (e) { storageOk = false; }
     showStatus();
@@ -1408,6 +1661,24 @@ if (typeof module !== 'undefined') module.exports = PAA;
     return out;
   }
 
+  /** Opções da lista de uma célula (null se a célula não tiver lista). */
+  function listAt(sh, r, c) {
+    if (RGON && sh.idx === INFO && r >= RG.T_FIRST && r <= RG.T_LAST) {
+      if (c === 3) return RG.LEVELS;
+      if (c === 2) {
+        var named = [], all = [];
+        for (var q = 8; q <= 32; q++) {
+          var sg = PAA.cellVal(INFO, q, 5), nm = PAA.cellVal(INFO, q, 3);
+          if (sg === null || sg === '') continue;
+          all.push(sg); if (nm !== null && nm !== '') named.push(sg);
+        }
+        return named.length ? named : all;
+      }
+    }
+    var dv = dvFor(sh, r, c);
+    return dv ? dvOptions(dv) : null;
+  }
+
   /* ------------------------------------------------------------ construção de uma folha */
   var borderCss = {}, borderN = 0, styleEl = document.createElement('style');
   document.head.appendChild(styleEl);
@@ -1444,7 +1715,7 @@ if (typeof module !== 'undefined') module.exports = PAA;
     def.cols.forEach(function (cd) { for (var k = cd[0]; k <= Math.min(cd[1], lastCol); k++) W[k] = cd[3] ? 0 : px(cd[2]); });
     var visC = [], visR = [], prevC = {}, prevR = {};
     for (c = 1; c <= lastCol; c++) if (W[c] > 0) { prevC[c] = visC.length ? visC[visC.length - 1] : 0; visC.push(c); }
-    for (r = 1; r <= sh.maxRow; r++) if (!(sh.rowMeta[r] && sh.rowMeta[r].hidden)) { prevR[r] = visR.length ? visR[visR.length - 1] : 0; visR.push(r); }
+    for (r = 1; r <= sh.maxRow; r++) if (!isHiddenRow(sh, r)) { prevR[r] = visR.length ? visR[visR.length - 1] : 0; visR.push(r); }
     var lastVisC = visC[visC.length - 1], lastVisR = visR[visR.length - 1];
     var left = {}, acc = 0;
     visC.forEach(function (cc) { left[cc] = acc; acc += W[cc]; });
@@ -1500,7 +1771,7 @@ if (typeof module !== 'undefined') module.exports = PAA;
           r2 = m[2]; c2 = m[3];
           var cs = 0, rs = 0;
           for (i = c; i <= c2; i++) if (W[i] > 0) cs++;
-          for (i = r; i <= r2; i++) if (!(sh.rowMeta[i] && sh.rowMeta[i].hidden)) rs++;
+          for (i = r; i <= r2; i++) if (!isHiddenRow(sh, i)) rs++;
           if (cs > 1) attrs += ' colspan="' + cs + '"';
           if (rs > 1) attrs += ' rowspan="' + rs + '"';
         }
@@ -1519,18 +1790,19 @@ if (typeof module !== 'undefined') module.exports = PAA;
         if (cell) {
           var isRot = fl & 32;
           if (cell.ed) {
-            var dv = dvFor(sh, r, c), kind = 't';
-            if (dv) { var op = dvOptions(dv); kind = op.length === 1 && op[0] === '■' ? 'g' : 'l'; }
+            var op = listAt(sh, r, c), kind = 't';
+            if (op) kind = op.length === 1 && op[0] === '■' ? 'g' : 'l';
             cls += ' ed' + (kind === 'g' ? ' tg' : kind === 'l' ? ' ls' : '');
             var iv = PAA.inputValue(si, cell);
             if (typeof iv === 'number' && !(fl & 8)) cls += ' num';
-            html = escHtml(PAA.display(iv, fl));
+            if (RG.isAuto(si, r, c)) cls += ' auto';
+            html = escHtml(disp(iv, fl));
             data = ' data-k="' + k + '" tabindex="0"';
           } else if (cell.k >= 3) {
             var fv = PAA.cellVal(si, r, c), sf = spill(fl, m, r, pc, visC[ci + 1]);
             if (typeof fv === 'number' && !(fl & 8)) cls += ' num';
             cls += ' fx ' + sf[0];
-            html = escHtml(PAA.display(fv, fl));
+            html = escHtml(disp(fv, fl));
             if (sf[1]) html = '<span>' + html + '</span>';
             data = ' data-k="' + k + '"';
           } else if (cell.k === 2) {
@@ -1544,6 +1816,11 @@ if (typeof module !== 'undefined') module.exports = PAA;
           }
           if (isRot && html) html = '<div class="rot">' + html + '</div>';
           if (def.comments[PAA.refOf(r, c)]) { cls += ' cm'; if (!data) data = ' data-k="' + k + '"'; }
+        }
+        if (si === MON && c === 1 && RG.rows().indexOf(r) >= 0) {
+          var nrg = RG.count(r);
+          html = '<button type="button" class="rg' + (nrg ? ' has' : '') + '" data-row="' + r + '" title="Registar sessões desta atividade">' + (nrg || '+') + '</button>';
+          cls += ' rgc';
         }
         if (shapes[k]) html = '<span class="shape" style="color:' + shapes[k].color + ';border-color:' + shapes[k].line + '">' + escHtml(shapes[k].text) + '</span>' + html;
         h.push('<td' + (cls ? ' class="' + cls.trim() + '"' : '') + data + attrs + (style ? ' style="' + style + '"' : '') + '>' + html + '</td>');
@@ -1601,18 +1878,24 @@ if (typeof module !== 'undefined') module.exports = PAA;
     var v = view[si]; if (!v) return;
     if (v.charts) { drawCharts(si, v); v.ver = PAA.version(); return; }
     for (var i = 0; i < v.fx.length; i++) {
-      var f = v.fx[i], val = PAA.cellVal(si, f.cell.r, f.cell.c), fl = D.xf[f.cell.s][0], t = PAA.display(val, fl);
+      var f = v.fx[i], val = PAA.cellVal(si, f.cell.r, f.cell.c), fl = D.xf[f.cell.s][0], t = disp(val, fl);
       if (t !== f.t) {
         f.node.textContent = t; f.t = t;
         if (!(fl & 8)) f.td.classList.toggle('num', typeof val === 'number');
       }
       if (f.cf) { var css = cfCss(f, val); if (css !== f.css) { applyCss(f.td, f.css, css); f.css = css; } }
     }
+    if (si === MON) {
+      // o botão de registos só aparece nas linhas que têm atividade
+      var bs = v.el.querySelectorAll('button.rg');
+      for (var j = 0; j < bs.length; j++) { var rw = +bs[j].getAttribute('data-row'), nm = PAA.cellVal(MON, rw, 2); bs[j].hidden = !(typeof nm === 'string' && nm.trim()) && !RG.count(rw); }
+    }
     v.ver = PAA.version();
     layoutFrozen(v);
   }
   var refreshTimer = null;
   function changed() {
+    if (regSync) syncRegs();
     touch();
     if (!refreshTimer) refreshTimer = setTimeout(function () { refreshTimer = null; refresh(active); showStatus(); }, 60);
   }
@@ -1636,6 +1919,8 @@ if (typeof module !== 'undefined') module.exports = PAA;
     try { localStorage.setItem(TABKEY, String(si)); } catch (e) { /* sem memória */ }
     setBar('', sheets[si].def.charts.length ? 'Gráficos gerados automaticamente a partir da folha «3. Síntese».' :
       !sheets[si].editable.length ? 'Folha de leitura, sem campos a preencher.' :
+      si === MON ? 'Use o botão + à esquerda de cada atividade para registar sessões (data, turmas, participantes): a app soma tudo e preenche a linha.' :
+      si === INFO ? 'Preencha as escolas e os objetivos; no fim da folha, a lista de turmas serve os registos de sessões da Monitorização.' :
       'Clique numa célula para a preencher. As contagens e os totais são calculados automaticamente.', true);
   }
   sheets.forEach(function (sh, i) {
@@ -1664,15 +1949,26 @@ if (typeof module !== 'undefined') module.exports = PAA;
   /* ------------------------------------------------------------ edição */
   function paint(td) {
     var cell = td._cell, v = PAA.inputValue(td._si, cell), fl = D.xf[cell.s][0];
-    td.textContent = PAA.display(v, fl);
+    td.textContent = disp(v, fl);
     if (!(fl & 8)) td.classList.toggle('num', typeof v === 'number');
+    if (td._si === MON) td.classList.toggle('auto', RG.isAuto(MON, cell.r, cell.c));
   }
+  function repaintRow(r) {
+    var v = view[MON]; if (!v) return;
+    var cells = sheets[MON].grid[r] || [];
+    for (var c = 1; c < cells.length; c++) { var td = v.td[r + ',' + c]; if (td && td._cell.ed && !(editing && editing.td === td)) paint(td); }
+    var b = v.el.querySelector('button.rg[data-row="' + r + '"]');
+    if (b) { var n = RG.count(r); b.textContent = n || '+'; b.classList.toggle('has', n > 0); }
+  }
+  function syncRegs() { regSync = false; if (!RG.has()) return; RG.apply(); var all = RG.get(); for (var k in all) repaintRow(+k); }
   function setCell(td, value, noUndo) {
     var cell = td._cell, si = td._si, old = PAA.inputValue(si, cell);
     if (value === '' || value === undefined) value = null;
     if (old === value) return false;
+    if (RG.isAuto(si, cell.r, cell.c)) return false;
     if (!noUndo) { undoStack.push({ si: si, r: cell.r, c: cell.c, old: old }); if (undoStack.length > 300) undoStack.shift(); }
     PAA.setInput(si, cell.r, cell.c, value);
+    if (si === INFO && cell.r >= RG.T_FIRST) regSync = true;
     paint(td); changed();
     return true;
   }
@@ -1704,7 +2000,7 @@ if (typeof module !== 'undefined') module.exports = PAA;
   }
   function openList(td) {
     if (editing) commitEdit();
-    var cell = td._cell, cur = PAA.inputValue(td._si, cell), dv = dvFor(sheets[td._si], cell.r, cell.c), opts = dvOptions(dv);
+    var cell = td._cell, cur = PAA.inputValue(td._si, cell), opts = listAt(sheets[td._si], cell.r, cell.c) || [];
     var sel = document.createElement('select');
     sel.setAttribute('aria-label', 'Célula ' + PAA.refOf(cell.r, cell.c));
     var all = [null].concat(opts);
@@ -1746,11 +2042,14 @@ if (typeof module !== 'undefined') module.exports = PAA;
   function step(td, d) { var o = view[td._si].order, t = o[td._i + d]; (t || td).focus(); }
 
   function activateCell(td, viaMouse) {
+    if (RG.isAuto(td._si, td._cell.r, td._cell.c)) { if (viaMouse) openRegs(td._cell.r); else toast('Valor calculado a partir dos registos desta atividade. Use o botão à esquerda da linha para os alterar.'); return; }
     var k = kindOf(td);
     if (k === 'g') toggle(td); else if (k === 'l') openList(td); else openText(td, undefined, !viaMouse);
   }
 
   stage.addEventListener('click', function (e) {
+    var rb = e.target.closest ? e.target.closest('button.rg') : null;
+    if (rb) { if (editing) commitEdit(); openRegs(+rb.getAttribute('data-row')); return; }
     var td = e.target.closest ? e.target.closest('td') : null;
     if (!td || !td._cell) return;
     if (td.classList.contains('cm')) showTip(td, true);
@@ -1769,6 +2068,7 @@ if (typeof module !== 'undefined') module.exports = PAA;
     else if (key === 'ArrowRight') { move(td, 0, 1); e.preventDefault(); }
     else if (key === 'ArrowLeft') { move(td, 0, -1); e.preventDefault(); }
     else if (key === 'Enter' || key === 'F2') { e.preventDefault(); if (k === 'g') { toggle(td); } else activateCell(td, key === 'F2'); }
+    else if (RG.isAuto(td._si, td._cell.r, td._cell.c)) { if (key.length === 1 || key === 'Delete' || key === 'Backspace' || key === 'Enter' || key === 'F2') { e.preventDefault(); activateCell(td, false); } }
     else if (key === 'Delete' || key === 'Backspace') { e.preventDefault(); setCell(td, null); describe(td); }
     else if (key === ' ' && k !== 't') { e.preventDefault(); activateCell(td); }
     else if (key.length === 1) {
@@ -1799,7 +2099,7 @@ if (typeof module !== 'undefined') module.exports = PAA;
     var k = kindOf(td);
     if (k === 'g') return /^\s*(■|x|s|sim|1)\s*$/i.test(text) ? '■' : null;
     if (k === 'l') {
-      var opts = dvOptions(dvFor(sheets[td._si], td._cell.r, td._cell.c)), t = text.trim().toLowerCase();
+      var opts = listAt(sheets[td._si], td._cell.r, td._cell.c) || [], t = text.trim().toLowerCase();
       for (var i = 0; i < opts.length; i++) if (PAA.display(opts[i], 0).toLowerCase() === t) return opts[i];
       return t === '' ? null : undefined;
     }
@@ -1812,17 +2112,17 @@ if (typeof module !== 'undefined') module.exports = PAA;
     if (text === undefined || text === null) return;
     e.preventDefault();
     var rows = parseTsv(text), v = view[td._si], snap = null, n = 0, skipped = 0;
-    if (rows.length > 1 || (rows[0] && rows[0].length > 1)) snap = PAA.exportState();
+    if (rows.length > 1 || (rows[0] && rows[0].length > 1)) snap = snapshot();
     rows.forEach(function (row, i) {
       row.forEach(function (txt, j) {
         var t = v.td[(td._cell.r + i) + ',' + (td._cell.c + j)], cell = PAA.getCell(td._si, td._cell.r + i, td._cell.c + j);
-        if (!cell || !cell.ed) { if (txt !== '') skipped++; return; }
+        if (!cell || !cell.ed || RG.isAuto(td._si, cell.r, cell.c)) { if (txt !== '') skipped++; return; }
         var val = t ? coerce(t, txt) : PAA.parseInput(txt);
         if (val === undefined) { skipped++; return; }
         if (t) { if (setCell(t, val, !!snap)) n++; } else if (PAA.setInput(td._si, cell.r, cell.c, val)) n++;
       });
     });
-    if (snap && n) { undoStack.push({ snap: snap }); changed(); }
+    if (snap && n) { undoStack.push(snap); changed(); }
     if (snap) toast(n + ' células preenchidas' + (skipped ? ' · ' + skipped + ' valores ignorados (células calculadas ou valores fora da lista)' : '') + '.');
     describe(td);
   });
@@ -1837,7 +2137,7 @@ if (typeof module !== 'undefined') module.exports = PAA;
   function undo() {
     if (editing) { cancelEdit(); return; }
     var u = undoStack.pop(); if (!u) return;
-    if (u.snap) { PAA.importState(u.snap); touch(); rebuildAll(); }
+    if (u.snap) { PAA.importState(u.snap); RG.set(u.regs || {}); touch(); rebuildAll(); }
     else {
       PAA.setInput(u.si, u.r, u.c, u.old);
       var v = view[u.si], td = v && v.td[u.r + ',' + u.c];
@@ -1912,7 +2212,7 @@ if (typeof module !== 'undefined') module.exports = PAA;
       var frac = val / total, a1 = a0 + frac * 2 * Math.PI, mid = (a0 + a1) / 2;
       if (frac >= 0.9999) svg.appendChild(svgEl('circle', { cx: cx, cy: cy, r: R, fill: color, stroke: '#fff' }));
       else svg.appendChild(svgEl('path', { d: 'M' + cx + ' ' + cy + 'L' + (cx + R * Math.cos(a0)).toFixed(2) + ' ' + (cy + R * Math.sin(a0)).toFixed(2) + 'A' + R + ' ' + R + ' 0 ' + (frac > 0.5 ? 1 : 0) + ' 1 ' + (cx + R * Math.cos(a1)).toFixed(2) + ' ' + (cy + R * Math.sin(a1)).toFixed(2) + 'Z', fill: color, stroke: '#fff', 'stroke-width': 1.5 }));
-      var pct = Math.round(frac * 100) + '%', txt = PAA.display(val, 0) + (s.pct ? '; ' + pct : '');
+      var pct = Math.round(frac * 100) + '%', txt = disp(val, 0) + (s.pct ? '; ' + pct : '');
       desc.push(label.trim() + ': ' + txt);
       if (frac > 0.045) { var rr = frac >= 0.9999 ? 0 : R * 0.62; svg.appendChild(svgEl('text', { x: (cx + rr * Math.cos(mid)).toFixed(1), y: (cy + rr * Math.sin(mid) + 4).toFixed(1), 'text-anchor': 'middle', 'font-size': 12.5, 'font-weight': 700, fill: lum(color) < 0.55 ? '#fff' : '#1c2733' }, txt)); }
       a0 = a1;
@@ -1946,9 +2246,9 @@ if (typeof module !== 'undefined') module.exports = PAA;
       g.forEach(function (b, bi) {
         var hgt = top ? (B - T) * b.v / top : 0, x = x0 + bw * bi;
         var rect = svgEl('rect', { x: x.toFixed(1), y: (B - hgt).toFixed(1), width: Math.max(1, bw - 2).toFixed(1), height: Math.max(0, hgt).toFixed(1), fill: b.color, stroke: '#4a6f93', 'stroke-width': 0.6 });
-        rect.appendChild(svgEl('title', {}, b.name + ': ' + PAA.display(b.v, 0))); svg.appendChild(rect);
-        svg.appendChild(svgEl('text', { x: (x + (bw - 2) / 2).toFixed(1), y: (B - hgt - 5).toFixed(1), 'text-anchor': 'middle', 'font-size': 11.5, fill: '#333' }, PAA.display(b.v, 0)));
-        desc.push(b.name + ': ' + PAA.display(b.v, 0));
+        rect.appendChild(svgEl('title', {}, b.name + ': ' + disp(b.v, 0))); svg.appendChild(rect);
+        svg.appendChild(svgEl('text', { x: (x + (bw - 2) / 2).toFixed(1), y: (B - hgt - 5).toFixed(1), 'text-anchor': 'middle', 'font-size': 11.5, fill: '#333' }, disp(b.v, 0)));
+        desc.push(b.name + ': ' + disp(b.v, 0));
       });
       var lx = L + gw * gi + gw / 2, lab = svgEl('text', multi ? { x: lx, y: B + 16, 'text-anchor': 'middle', 'font-size': 11.5, fill: '#333' } :
         { x: lx, y: B + 12, 'text-anchor': 'end', 'font-size': 11, fill: '#333', transform: 'rotate(-38 ' + lx + ' ' + (B + 12) + ')' }, shorten(labels[gi], multi ? 20 : 15));
@@ -1985,6 +2285,143 @@ if (typeof module !== 'undefined') module.exports = PAA;
     });
   }
 
+  /* ------------------------------------------------------------ registos de sessões por atividade */
+  var rgDlg = null, rgRow = 0, rgEdit = -1, rgSel = {}, E = {};
+  function today() { var d = new Date(); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function mk(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; }
+  function rgBuild() {
+    rgDlg = mk('dialog', 'dlg rgd'); rgDlg.id = 'rg'; rgDlg.setAttribute('aria-labelledby', 'rg-title');
+    rgDlg.innerHTML =
+      '<div class="rg-head"><div><p class="rg-kicker" id="rg-kicker"></p><h2 id="rg-title"></h2></div><button type="button" class="btn" id="rg-close">Fechar</button></div>' +
+      '<div class="rg-tot" id="rg-tot"></div><p class="rg-note" id="rg-note" hidden></p>' +
+      '<div class="rg-cols"><section class="rg-form"><h3 id="rg-ftitle">Novo registo</h3>' +
+      '<div class="rg-row"><label>Data<input type="date" id="rg-date"></label><label>N.º de sessões<input type="number" id="rg-n" min="1" step="1" value="1" inputmode="numeric"></label></div>' +
+      '<div class="rg-tbox"><div class="rg-thead"><strong id="rg-count">Turmas</strong><input type="search" id="rg-filter" placeholder="Filtrar turmas…" aria-label="Filtrar turmas">' +
+      '<button type="button" class="lnk" id="rg-all">Selecionar visíveis</button><button type="button" class="lnk" id="rg-none">Limpar</button></div><div class="rg-turmas" id="rg-turmas"></div></div>' +
+      '<fieldset class="rg-extra"><legend>Outros participantes, por sessão (opcional)</legend>' +
+      '<label>Alunos sem turma<input type="number" id="rg-ai" min="0" inputmode="numeric"></label><label>Docentes com turma<input type="number" id="rg-dt" min="0" inputmode="numeric"></label>' +
+      '<label>Docentes sem turma<input type="number" id="rg-di" min="0" inputmode="numeric"></label><label>Pais e EE<input type="number" id="rg-p" min="0" inputmode="numeric"></label>' +
+      '<label>Outros<input type="number" id="rg-o" min="0" inputmode="numeric"></label></fieldset>' +
+      '<label class="rg-obs">Observações<input type="text" id="rg-x" maxlength="300"></label>' +
+      '<p class="rg-err" id="rg-err" role="alert" hidden></p>' +
+      '<div class="rg-actions"><button type="button" class="btn primary" id="rg-save">Guardar registo</button><button type="button" class="btn" id="rg-cancel" hidden>Cancelar edição</button></div></section>' +
+      '<section class="rg-list"><h3 id="rg-ltitle">Registos</h3><div id="rg-list"></div>' +
+      '<p class="rg-rule">Regra do modelo PAA-RBE: cada turma conta uma só vez e o n.º de sessões é a média por turma. As participações são calculadas pelas fórmulas do modelo.</p></section></div>';
+    document.body.appendChild(rgDlg);
+    ['kicker', 'title', 'close', 'tot', 'note', 'ftitle', 'date', 'n', 'count', 'filter', 'all', 'none', 'turmas', 'ai', 'dt', 'di', 'p', 'o', 'x', 'err', 'save', 'cancel', 'ltitle', 'list'].forEach(function (k) { E[k] = document.getElementById('rg-' + k); });
+    E.close.addEventListener('click', function () { rgDlg.close(); });
+    E.filter.addEventListener('input', rgTurmas);
+    E.all.addEventListener('click', function () { var b = E.turmas.querySelectorAll('input'); for (var i = 0; i < b.length; i++) { b[i].checked = true; rgSel[b[i].value] = true; } rgCount(); });
+    E.none.addEventListener('click', function () { rgSel = {}; rgTurmas(); });
+    E.turmas.addEventListener('change', function (e) { if (e.target.value) { if (e.target.checked) rgSel[e.target.value] = true; else delete rgSel[e.target.value]; rgCount(); } });
+    E.turmas.addEventListener('click', function (e) { if (e.target.id === 'rg-goto') { rgDlg.close(); goTurmas(); } });
+    E.save.addEventListener('click', rgSave);
+    E.cancel.addEventListener('click', function () { rgReset(); rgRender(); });
+    E.list.addEventListener('click', function (e) {
+      var b = e.target.closest ? e.target.closest('button[data-act]') : null; if (!b) return;
+      var i = +b.getAttribute('data-i'), act = b.getAttribute('data-act'), list = RG.row(rgRow), rec = list[i]; if (!rec) return;
+      if (act === 'del') {
+        if (!b.getAttribute('data-arm')) { b.setAttribute('data-arm', '1'); b.textContent = 'Confirmar'; b.classList.add('arm'); return; }
+        undoStack.push(snapshot()); list.splice(i, 1); RG.setRow(rgRow, list); rgAfter();
+      } else {
+        rgEdit = act === 'edit' ? i : -1;
+        E.date.value = act === 'edit' ? rec.d : today(); E.n.value = rec.n;
+        rgSel = {}; rec.t.forEach(function (id) { rgSel[id] = true; });
+        E.ai.value = rec.ai || ''; E.dt.value = rec.dt || ''; E.di.value = rec.di || ''; E.p.value = rec.p || ''; E.o.value = rec.o || ''; E.x.value = act === 'edit' ? rec.x : '';
+        E.filter.value = ''; E.err.hidden = true; rgRender(); E.date.focus();
+      }
+    });
+    rgDlg.addEventListener('close', function () { rgRow = 0; });
+  }
+  function rgReset() { rgEdit = -1; rgSel = {}; E.n.value = 1; E.ai.value = E.dt.value = E.di.value = E.p.value = E.o.value = E.x.value = E.filter.value = ''; E.err.hidden = true; if (!E.date.value) E.date.value = today(); }
+  function rgCount() { var n = 0; for (var k in rgSel) n++; E.count.textContent = n ? 'Turmas (' + n + ' selecionada' + (n > 1 ? 's' : '') + ')' : 'Turmas'; }
+  function rgTurmas() {
+    var all = RG.turmas(), f = E.filter.value.trim().toLowerCase(), box = E.turmas;
+    box.textContent = '';
+    if (!all.length) {
+      box.appendChild(mk('p', 'rg-empty', 'Ainda não há turmas definidas. A lista de turmas (escola, nível/ano, turma e n.º de alunos) preenche-se uma vez, no fim da folha «0. Informação geral».'));
+      var g = mk('button', 'btn', 'Definir turmas'); g.type = 'button'; g.id = 'rg-goto'; box.appendChild(g);
+    }
+    all.forEach(function (t) {
+      if (f && t.label.toLowerCase().indexOf(f) < 0 && !rgSel[t.id]) return;
+      var lab = mk('label', 'rg-t'), cb = mk('input');
+      cb.type = 'checkbox'; cb.value = t.id; cb.checked = !!rgSel[t.id];
+      lab.appendChild(cb); lab.appendChild(mk('span', '', t.label)); lab.appendChild(mk('small', '', t.alunos ? t.alunos + ' alunos' : 'sem n.º de alunos'));
+      box.appendChild(lab);
+    });
+    E.filter.hidden = E.all.hidden = E.none.hidden = !all.length;
+    rgCount();
+  }
+  function rgRender() {
+    var row = rgRow, name = PAA.cellVal(MON, row, 2), list = RG.row(row), a = RG.aggregate(row), byId = {}, i;
+    RG.turmas().forEach(function (t) { byId[t.id] = t; });
+    E.kicker.textContent = 'Domínio ' + RG.domain(row) + ' · Monitorização, linha ' + row;
+    E.title.textContent = String(name);
+    E.tot.textContent = '';
+    function chip(label, val) { var c = mk('span', 'rg-chip'); c.appendChild(document.createTextNode(label + ': ')); c.appendChild(mk('b', '', disp(val, 0))); E.tot.appendChild(c); }
+    function cv(c) { var v = PAA.cellVal(MON, row, c); return typeof v === 'number' ? v : 0; }
+    if (a.n) {
+      chip('Turmas', a.turmas); chip('Sessões (média por turma)', a.sess); chip('Alunos em turma', a.alTur);
+      chip('Participações de alunos', cv(20) + cv(21)); chip('Participações de docentes', cv(24) + cv(25));
+      if (a.pais) chip('Pais e EE', a.pais); if (a.outros) chip('Outros', a.outros);
+    } else E.tot.appendChild(mk('span', 'rg-none', 'Ainda sem registos. Os valores desta linha continuam a poder ser escritos à mão na grelha.'));
+    var notes = [];
+    if (!a.n) { var manual = false; [15, 16, 18, 19, 22, 23, 26, 27, 39, 40, 41, 42, 43].forEach(function (c) { if (PAA.cellVal(MON, row, c) !== null) manual = true; }); if (manual) notes.push('Esta linha já tem valores escritos à mão; ao guardar o primeiro registo, passam a ser calculados pela app a partir dos registos.'); }
+    if (a.missing.length) notes.push('Há registos com turmas que já não existem na lista de turmas (' + a.missing.join(', ') + '); os alunos dessas turmas não estão a ser contados.');
+    if (a.semNivel) notes.push('Há turmas cujo nível/ano não corresponde a um ciclo; os seus alunos não entram na distribuição por nível de ensino.');
+    E.note.hidden = !notes.length; E.note.textContent = notes.join(' ');
+    E.ftitle.textContent = rgEdit >= 0 ? 'Editar registo' : 'Novo registo';
+    E.save.textContent = rgEdit >= 0 ? 'Guardar alterações' : 'Guardar registo'; E.cancel.hidden = rgEdit < 0;
+    E.ltitle.textContent = 'Registos' + (list.length ? ' (' + list.length + ')' : '');
+    E.list.textContent = '';
+    if (!list.length) E.list.appendChild(mk('p', 'rg-empty', 'Cada registo corresponde a um dia (ou conjunto de sessões) da atividade: escolha a data e as turmas e guarde. Pode registar a atividade aos poucos, à medida que as turmas participam.'));
+    else {
+      var tb = mk('table', 'rg-table'), hd = mk('tr');
+      ['Data', 'Turmas e participantes', 'Sessões', ''].forEach(function (x) { hd.appendChild(mk('th', '', x)); });
+      tb.appendChild(hd);
+      list.forEach(function (rec, idx) {
+        var tr = mk('tr', idx === rgEdit ? 'cur' : ''), parts = [];
+        tr.appendChild(mk('td', 'rg-d', RG.isoToPt(rec.d) || '—'));
+        var what = mk('td');
+        what.appendChild(mk('div', '', rec.t.length ? rec.t.map(function (id) { return byId[id] ? byId[id].label : id + ' (removida)'; }).join('; ') : 'Sem turmas'));
+        if (rec.ai) parts.push(rec.ai + ' alunos sem turma'); if (rec.dt) parts.push(rec.dt + ' docentes com turma'); if (rec.di) parts.push(rec.di + ' docentes sem turma');
+        if (rec.p) parts.push(rec.p + ' pais/EE'); if (rec.o) parts.push(rec.o + ' outros'); if (rec.x) parts.push(rec.x);
+        if (parts.length) what.appendChild(mk('small', '', parts.join(' · ')));
+        tr.appendChild(what); tr.appendChild(mk('td', 'rg-n', String(rec.n)));
+        var ac = mk('td', 'rg-ac');
+        [['edit', 'Editar'], ['dup', 'Duplicar'], ['del', 'Apagar']].forEach(function (x) { var b = mk('button', 'lnk', x[1]); b.type = 'button'; b.setAttribute('data-act', x[0]); b.setAttribute('data-i', idx); ac.appendChild(b); });
+        tr.appendChild(ac); tb.appendChild(tr);
+      });
+      E.list.appendChild(tb);
+    }
+    rgTurmas();
+  }
+  function rgAfter() { var row = rgRow; repaintRow(row); changed(); rgReset(); rgRender(); showStatus(); }
+  function rgSave() {
+    function num(el) { var v = parseFloat(String(el.value).replace(',', '.')); return isFinite(v) && v > 0 ? v : 0; }
+    var rec = { d: E.date.value, t: Object.keys(rgSel), n: Math.max(1, Math.round(num(E.n)) || 1), ai: num(E.ai), dt: num(E.dt), di: num(E.di), p: num(E.p), o: num(E.o), x: E.x.value.trim() };
+    var msg = !rec.d ? 'Indique a data.' : (!rec.t.length && !rec.ai && !rec.dt && !rec.di && !rec.p && !rec.o) ? 'Selecione pelo menos uma turma ou indique participantes.' : '';
+    if (msg) { E.err.textContent = msg; E.err.hidden = false; return; }
+    var list = RG.row(rgRow);
+    undoStack.push(snapshot());
+    if (rgEdit >= 0) list[rgEdit] = rec; else list.push(rec);
+    RG.setRow(rgRow, list); rgAfter();
+  }
+  function openRegs(row) {
+    if (!RGON) return;
+    var name = PAA.cellVal(MON, row, 2);
+    if (typeof name !== 'string' || !name.trim()) { toast('Esta linha ainda não tem atividade. Escreva primeiro a atividade na folha «1. Plano anual atividades».'); return; }
+    if (!rgDlg) rgBuild();
+    if (!rgDlg.showModal) { toast('Este navegador não suporta a janela de registos. Atualize o navegador.'); return; }
+    rgRow = row; E.date.value = today(); rgReset(); rgRender();
+    if (!rgDlg.open) rgDlg.showModal();
+  }
+  function goTurmas() {
+    activate(INFO);
+    var td = view[INFO].td[RG.T_FIRST + ',2'];
+    if (td) { td.scrollIntoView({ block: 'center', inline: 'nearest' }); td.focus(); }
+  }
+
   /* ------------------------------------------------------------ Excel: descarregar / importar */
   function fileName() {
     var pl = PAA.sheet('1. Plano anual atividades'), name = '';
@@ -2014,12 +2451,12 @@ if (typeof module !== 'undefined') module.exports = PAA;
     rd.onerror = function () { toast('Não foi possível ler o ficheiro.'); };
     rd.onload = function () {
       PAA.readXlsx(rd.result).then(function (res) {
-        var has = PAA.countChanges() > 0;
-        return confirmDlg('Importar «' + f.name + '»?', 'O ficheiro tem ' + res.filled + ' células preenchidas.' +
+        var has = PAA.countChanges() > 0 || RG.has();
+        return confirmDlg('Importar «' + f.name + '»?', 'O ficheiro tem ' + res.filled + ' células preenchidas' + (res.nregs ? ' e ' + res.nregs + ' registos de sessões' : '') + '.' +
           (has ? '\nOs dados que estão agora na aplicação serão substituídos pelos do ficheiro.' : ''), 'Importar').then(function (ok) {
           if (!ok) return;
-          var snap = PAA.exportState();
-          PAA.importState(res.values); undoStack.push({ snap: snap });
+          var snap = snapshot();
+          PAA.importState(res.values); RG.set(res.regs || {}); undoStack.push(snap);
           meta.saved = Date.now(); meta.pending = false; meta.exported = null; saveNow(); rebuildAll();
           toast('Dados importados de «' + f.name + '».', 'Anular', undo);
         });
@@ -2032,8 +2469,8 @@ if (typeof module !== 'undefined') module.exports = PAA;
     confirmDlg('Limpar todos os dados?', 'Todas as células voltam ao estado inicial do modelo.' +
       (meta.pending || !meta.exported ? '\nHá alterações que ainda não foram descarregadas para Excel.' : ''), 'Limpar tudo').then(function (ok) {
       if (!ok) return;
-      var snap = PAA.exportState();
-      PAA.clearState(); undoStack.push({ snap: snap });
+      var snap = snapshot();
+      PAA.clearState(); RG.set({}); undoStack.push(snap);
       meta.saved = Date.now(); meta.pending = false; meta.exported = null; saveNow(); rebuildAll();
       toast('Dados limpos.', 'Anular', undo);
     });
@@ -2058,7 +2495,7 @@ if (typeof module !== 'undefined') module.exports = PAA;
   try { var t = parseInt(localStorage.getItem(TABKEY), 10); if (t >= 0 && t < sheets.length) first = t; } catch (e) { storageOk = false; }
   activate(first);
   showStatus();
-  window.PAA_UI = { activate: activate, refresh: refresh };
+  window.PAA_UI = { activate: activate, refresh: refresh, openRegs: openRegs };
 })();
 </script>
 </body>
